@@ -33,6 +33,7 @@ export default function OnboardingScreen({
 }: Props) {
   const isSmall = height < 780;
   const isVerySmall = height < 700;
+  const androidLift = Platform.OS === 'android' ? -30 : 0;
 
   const imageSize = isVerySmall
     ? width * 0.5
@@ -50,7 +51,6 @@ export default function OnboardingScreen({
       <View style={styles.overlay} />
 
       <SafeAreaView style={styles.safeArea}>
-  
         <View
           style={[
             styles.steps,
@@ -81,7 +81,6 @@ export default function OnboardingScreen({
           ))}
         </View>
 
-
         <View
           style={[
             styles.imageWrap,
@@ -101,13 +100,13 @@ export default function OnboardingScreen({
           />
         </View>
 
-
         <View
           style={[
             styles.content,
             {
               paddingHorizontal: isVerySmall ? 20 : isSmall ? 24 : 28,
               paddingBottom: isVerySmall ? 18 : isSmall ? 24 : 32,
+              transform: [{ translateY: androidLift }],
             },
           ]}
         >
@@ -145,6 +144,7 @@ export default function OnboardingScreen({
               marginBottom: isVerySmall ? 18 : isSmall ? 24 : 18,
               height: isVerySmall ? 50 : isSmall ? 52 : 54,
               borderRadius: isVerySmall ? 12 : 14,
+              transform: [{ translateY: androidLift }],
             },
           ]}
           onPress={onPress}
@@ -179,7 +179,6 @@ const styles = StyleSheet.create({
     ...StyleSheet.absoluteFillObject,
     backgroundColor: 'rgba(5, 15, 10, 0.72)',
   },
-
   steps: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -218,14 +217,11 @@ const styles = StyleSheet.create({
   stepLineActive: {
     backgroundColor: '#00ff88',
   },
-
   imageWrap: {
     alignItems: 'center',
     justifyContent: 'center',
   },
-
   content: {},
-
   title: {
     fontWeight: '700',
     color: '#FFFFFF',
@@ -235,7 +231,6 @@ const styles = StyleSheet.create({
     color: 'rgba(255,255,255,0.68)',
     fontWeight: '400',
   },
-
   button: {
     backgroundColor: '#00ff88',
     alignItems: 'center',

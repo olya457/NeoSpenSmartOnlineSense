@@ -30,6 +30,8 @@ export default function TestScreen({ navigation }: Props) {
 
   const isSmall = height < 780;
   const isVerySmall = height < 700;
+  const androidOffset = Platform.OS === 'android' ? 20 : 0;
+  const androidBottomExtra = Platform.OS === 'android' ? 40 : 0;
 
   const question = questions[current];
   const total = questions.length;
@@ -151,9 +153,9 @@ export default function TestScreen({ navigation }: Props) {
           contentContainerStyle={[
             styles.scrollContent,
             {
-              paddingTop: 15,
+              paddingTop: 15 + androidOffset,
               paddingHorizontal: isVerySmall ? 16 : 20,
-              paddingBottom: 120,
+              paddingBottom: 120 + androidBottomExtra,
             },
           ]}
         >
@@ -292,7 +294,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(5, 12, 8, 0.82)',
   },
   scrollContent: {},
-
   heading: {
     fontWeight: '800',
     color: '#ffffff',
@@ -300,13 +301,11 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     alignSelf: 'center',
   },
-
   card: {
     backgroundColor: 'rgba(0, 30, 18, 0.85)',
     borderWidth: 1,
     borderColor: 'rgba(0,255,136,0.12)',
   },
-
   counter: {
     fontWeight: '700',
     color: '#ffffff',
@@ -314,14 +313,11 @@ const styles = StyleSheet.create({
   counterAccent: {
     color: '#00e676',
   },
-
   question: {
     color: 'rgba(255,255,255,0.78)',
     fontWeight: '400',
   },
-
   answers: {},
-
   answerBtn: {
     backgroundColor: '#00e676',
     alignItems: 'center',
@@ -344,7 +340,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-
   answerText: {
     fontWeight: '700',
     color: '#000000',
@@ -355,13 +350,11 @@ const styles = StyleSheet.create({
     color: 'rgba(0,0,0,0.5)',
     textAlign: 'center',
   },
-
   skipText: {
     color: 'rgba(255,255,255,0.42)',
     textAlign: 'center',
     textDecorationLine: 'underline',
   },
-
   nextBtn: {
     backgroundColor: '#00e676',
     alignItems: 'center',

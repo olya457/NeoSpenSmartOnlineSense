@@ -1,4 +1,4 @@
-package com.neospensmartonlinesense
+package com.neospensmart.online.sense
 
 import android.app.Application
 import com.facebook.react.PackageList

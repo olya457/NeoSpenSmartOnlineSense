@@ -68,9 +68,9 @@ export default function RulesScreen() {
           contentContainerStyle={[
             styles.list,
             {
-              paddingTop: 15,
+              paddingTop: Platform.OS === 'android' ? 35 : 15,
               paddingHorizontal: isVerySmall ? 16 : 20,
-              paddingBottom: 120,
+              paddingBottom: Platform.OS === 'android' ? 160 : 120,
             },
           ]}
           ListHeaderComponent={

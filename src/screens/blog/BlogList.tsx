@@ -10,6 +10,7 @@ import {
   Dimensions,
   StatusBar,
   SafeAreaView,
+  Platform,
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
@@ -43,9 +44,9 @@ export default function BlogList() {
           contentContainerStyle={[
             styles.list,
             {
-              paddingTop: 15,
+              paddingTop: Platform.OS === 'android' ? 35 : 15,
               paddingHorizontal: isVerySmall ? 16 : 20,
-              paddingBottom: 120,
+              paddingBottom: Platform.OS === 'android' ? 160 : 120,
             },
           ]}
           ListHeaderComponent={
@@ -166,7 +167,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     alignSelf: 'center',
   },
-
   card: {
     backgroundColor: 'rgba(255,255,255,0.07)',
     borderWidth: 1,

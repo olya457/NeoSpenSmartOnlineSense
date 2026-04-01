@@ -35,6 +35,8 @@ export default function StoryDetail({ navigation, route }: Props) {
 
   const isSmall = height < 780;
   const isVerySmall = height < 700;
+  const androidOffset = Platform.OS === 'android' ? 20 : 0;
+  const androidBottomExtra = Platform.OS === 'android' ? 40 : 0;
 
   useEffect(() => {
     let mounted = true;
@@ -84,7 +86,7 @@ export default function StoryDetail({ navigation, route }: Props) {
           style={[
             styles.header,
             {
-              paddingTop: 15,
+              paddingTop: 15 + androidOffset,
               paddingHorizontal: isVerySmall ? 14 : 16,
               paddingBottom: isVerySmall ? 10 : 12,
             },
@@ -142,9 +144,9 @@ export default function StoryDetail({ navigation, route }: Props) {
           contentContainerStyle={[
             styles.scroll,
             {
-              paddingTop: 8,
+              paddingTop: 8 + androidOffset,
               paddingHorizontal: isVerySmall ? 16 : 20,
-              paddingBottom: 120,
+              paddingBottom: 120 + androidBottomExtra,
             },
           ]}
         >

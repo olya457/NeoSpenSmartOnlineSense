@@ -29,6 +29,8 @@ export default function StoriesList() {
 
   const isSmall = height < 780;
   const isVerySmall = height < 700;
+  const androidOffset = Platform.OS === 'android' ? 20 : 0;
+  const androidBottomExtra = Platform.OS === 'android' ? 40 : 0;
 
   useFocusEffect(
     useCallback(() => {
@@ -69,9 +71,9 @@ export default function StoriesList() {
           contentContainerStyle={[
             styles.list,
             {
-              paddingTop: 15,
+              paddingTop: 15 + androidOffset,
               paddingHorizontal: isVerySmall ? 16 : 20,
-              paddingBottom: 120,
+              paddingBottom: 120 + androidBottomExtra,
             },
           ]}
           ListHeaderComponent={

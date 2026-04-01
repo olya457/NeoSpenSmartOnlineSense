@@ -84,7 +84,7 @@ export default function PlaceDetail({ navigation, route }: Props) {
           style={[
             styles.header,
             {
-              paddingTop: 15,
+              paddingTop: Platform.OS === 'android' ? 35 : 15,
               paddingHorizontal: isVerySmall ? 14 : 16,
               paddingBottom: isVerySmall ? 10 : 12,
             },
@@ -143,8 +143,9 @@ export default function PlaceDetail({ navigation, route }: Props) {
           contentContainerStyle={[
             styles.scroll,
             {
+              paddingTop: Platform.OS === 'android' ? 20 : 0,
               paddingHorizontal: isVerySmall ? 16 : 20,
-              paddingBottom: 120,
+              paddingBottom: Platform.OS === 'android' ? 160 : 120,
             },
           ]}
         >

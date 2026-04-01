@@ -23,20 +23,19 @@ type Props = {
   route: RouteProp<TestStackParamList, 'TestResults'>;
 };
 
-const PSIZE = 130;
-
 export default function TestResults({ navigation, route }: Props) {
   const { correct, total, answers } = route.params;
 
   const isSmall = height < 780;
   const isVerySmall = height < 700;
+  const androidOffset = Platform.OS === 'android' ? 20 : 0;
+  const androidBottomExtra = Platform.OS === 'android' ? 40 : 0;
 
   const skipped = Object.values(answers).filter((v) => v === 'skip').length;
   const wrong = total - correct - skipped;
 
   const correctDeg = (correct / total) * 360;
   const wrongDeg = (wrong / total) * 360;
-  const skipDeg = (skipped / total) * 360;
 
   const handleShare = async () => {
     try {
@@ -66,9 +65,9 @@ export default function TestResults({ navigation, route }: Props) {
           contentContainerStyle={[
             styles.scrollContent,
             {
-              paddingTop: 15,
+              paddingTop: 15 + androidOffset,
               paddingHorizontal: isVerySmall ? 16 : 20,
-              paddingBottom: 90,
+              paddingBottom: 90 + androidBottomExtra,
             },
           ]}
         >
@@ -307,7 +306,6 @@ const styles = StyleSheet.create({
   scrollContent: {
     flexGrow: 1,
   },
-
   heading: {
     fontWeight: '800',
     color: '#ffffff',
@@ -315,7 +313,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     alignSelf: 'center',
   },
-
   card: {
     backgroundColor: 'rgba(0, 30, 18, 0.85)',
     borderWidth: 1,
@@ -339,7 +336,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#ffffff',
   },
-
   chartRow: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -348,7 +344,6 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'center',
   },
-
   pieContainer: {
     backgroundColor: '#1a3a28',
     alignItems: 'center',
@@ -386,7 +381,6 @@ const styles = StyleSheet.create({
     fontWeight: '800',
     color: '#00e676',
   },
-
   legend: {
     flex: 1,
     gap: 14,
@@ -407,7 +401,6 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     flexShrink: 1,
   },
-
   restartBtn: {
     backgroundColor: '#00e676',
     alignItems: 'center',
