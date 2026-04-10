@@ -1,4 +1,4 @@
-package com.neospensmart.online.sense
+package com.neospendigitalsense
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
