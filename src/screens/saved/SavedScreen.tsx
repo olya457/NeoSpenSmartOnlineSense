@@ -567,7 +567,7 @@ const styles = StyleSheet.create({
   emptyCard: {
     backgroundColor: 'rgba(0,40,25,0.85)',
     borderWidth: 1,
-    borderColor: 'rgba(0,255,136,0.12)',
+    borderColor: 'rgba(255,255,255,0.12)',
   },
   emptyCardText: {
     fontWeight: '600',
@@ -583,7 +583,7 @@ const styles = StyleSheet.create({
   ruleCard: {
     backgroundColor: 'rgba(0,40,25,0.85)',
     borderWidth: 1,
-    borderColor: 'rgba(0,255,136,0.12)',
+    borderColor: 'rgba(255,255,255,0.12)',
   },
   ruleText: {
     fontWeight: '600',
@@ -596,7 +596,7 @@ const styles = StyleSheet.create({
   placeCard: {
     backgroundColor: 'rgba(0,40,25,0.85)',
     borderWidth: 1,
-    borderColor: 'rgba(0,255,136,0.12)',
+    borderColor: 'rgba(255,255,255,0.12)',
     flexDirection: 'row',
     alignItems: 'center',
     overflow: 'hidden',
@@ -617,7 +617,7 @@ const styles = StyleSheet.create({
   blogCard: {
     backgroundColor: 'rgba(0,40,25,0.85)',
     borderWidth: 1,
-    borderColor: 'rgba(0,255,136,0.12)',
+    borderColor: 'rgba(255,255,255,0.12)',
     overflow: 'hidden',
   },
   blogImage: {
@@ -645,7 +645,7 @@ const styles = StyleSheet.create({
   storyCard: {
     backgroundColor: 'rgba(0,40,25,0.85)',
     borderWidth: 1,
-    borderColor: 'rgba(0,255,136,0.12)',
+    borderColor: 'rgba(255,255,255,0.12)',
     flexDirection: 'row',
     alignItems: 'flex-start',
   },
@@ -672,14 +672,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   actionBtnSaved: {
-    backgroundColor: '#00ff88',
+    backgroundColor: '#d0d0d0',
     borderWidth: 1,
-    borderColor: '#00ff88',
+    borderColor: '#d0d0d0',
     alignItems: 'center',
     justifyContent: 'center',
     ...Platform.select({
       ios: {
-        shadowColor: '#00ff88',
+        shadowColor: '#d0d0d0',
         shadowOpacity: 0.25,
         shadowRadius: 8,
         shadowOffset: { width: 0, height: 0 },
@@ -693,7 +693,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   iconBtnGreen: {
-    backgroundColor: '#00ff88',
+    backgroundColor: '#d0d0d0',
     alignItems: 'center',
     justifyContent: 'center',
   },

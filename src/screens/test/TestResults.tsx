@@ -213,7 +213,7 @@ export default function TestResults({ navigation, route }: Props) {
 
               <View style={styles.legend}>
                 <View style={styles.legendRow}>
-                  <View style={[styles.legendDot, { backgroundColor: '#00e676' }]} />
+                  <View style={[styles.legendDot, { backgroundColor: '#d0d0d0' }]} />
                   <Text
                     style={[
                       styles.legendLabel,
@@ -316,7 +316,7 @@ const styles = StyleSheet.create({
   card: {
     backgroundColor: 'rgba(0, 30, 18, 0.85)',
     borderWidth: 1,
-    borderColor: 'rgba(0,255,136,0.12)',
+    borderColor: 'rgba(255,255,255,0.12)',
   },
   cardHeader: {
     flexDirection: 'row',
@@ -359,8 +359,8 @@ const styles = StyleSheet.create({
     borderLeftColor: 'transparent',
   },
   pieGreen: {
-    borderTopColor: '#00e676',
-    borderRightColor: '#00e676',
+    borderTopColor: '#d0d0d0',
+    borderRightColor: '#d0d0d0',
   },
   pieRed: {
     borderTopColor: '#d32f2f',
@@ -379,7 +379,7 @@ const styles = StyleSheet.create({
   },
   piePct: {
     fontWeight: '800',
-    color: '#00e676',
+    color: '#d0d0d0',
   },
   legend: {
     flex: 1,
@@ -402,12 +402,12 @@ const styles = StyleSheet.create({
     flexShrink: 1,
   },
   restartBtn: {
-    backgroundColor: '#00e676',
+    backgroundColor: '#d0d0d0',
     alignItems: 'center',
     justifyContent: 'center',
     ...Platform.select({
       ios: {
-        shadowColor: '#00e676',
+        shadowColor: '#d0d0d0',
         shadowOpacity: 0.18,
         shadowRadius: 8,
         shadowOffset: { width: 0, height: 0 },

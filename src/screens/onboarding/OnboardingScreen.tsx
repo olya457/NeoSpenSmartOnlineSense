@@ -197,8 +197,8 @@ const styles = StyleSheet.create({
     borderRadius: 3.5,
   },
   stepDotActive: {
-    backgroundColor: '#00ff88',
-    shadowColor: '#00ff88',
+    backgroundColor: '#d0d0d0',
+    shadowColor: '#d0d0d0',
     shadowOpacity: 0.8,
     shadowRadius: 6,
     shadowOffset: { width: 0, height: 0 },
@@ -215,7 +215,7 @@ const styles = StyleSheet.create({
     height: 1.2,
   },
   stepLineActive: {
-    backgroundColor: '#00ff88',
+    backgroundColor: '#d0d0d0',
   },
   imageWrap: {
     alignItems: 'center',
@@ -232,7 +232,7 @@ const styles = StyleSheet.create({
     fontWeight: '400',
   },
   button: {
-    backgroundColor: '#00ff88',
+    backgroundColor: '#d0d0d0',
     alignItems: 'center',
     justifyContent: 'center',
   },

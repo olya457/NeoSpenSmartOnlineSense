@@ -223,12 +223,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   headerIconBtnSaved: {
-    backgroundColor: '#00ff88',
+    backgroundColor: '#d0d0d0',
     alignItems: 'center',
     justifyContent: 'center',
     ...Platform.select({
       ios: {
-        shadowColor: '#00ff88',
+        shadowColor: '#d0d0d0',
         shadowOpacity: 0.25,
         shadowRadius: 8,
         shadowOffset: { width: 0, height: 0 },

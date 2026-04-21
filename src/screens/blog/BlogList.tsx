@@ -170,7 +170,7 @@ const styles = StyleSheet.create({
   card: {
     backgroundColor: 'rgba(255,255,255,0.07)',
     borderWidth: 1,
-    borderColor: 'rgba(0,255,136,0.12)',
+    borderColor: 'rgba(255,255,255,0.12)',
     overflow: 'hidden',
   },
   cardImage: {
@@ -196,7 +196,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   iconBtnGreen: {
-    backgroundColor: '#00ff88',
+    backgroundColor: '#d0d0d0',
     alignItems: 'center',
     justifyContent: 'center',
   },

@@ -42,11 +42,11 @@ const MATRIX_HTML = `
     gap: 5px;
   }
   .digit {
-    color: #00ff88;
+    color: #e8edebff;
     font-family: monospace;
     font-size: 18px;
     text-align: center;
-    text-shadow: 0 0 5px #00ff88;
+    text-shadow: 0 0 5px #eef9f4ff;
     animation: matrix-fall 2s infinite, matrix-flicker 0.5s infinite;
     opacity: 0;
   }

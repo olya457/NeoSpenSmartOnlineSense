@@ -304,14 +304,14 @@ const styles = StyleSheet.create({
   card: {
     backgroundColor: 'rgba(0, 30, 18, 0.85)',
     borderWidth: 1,
-    borderColor: 'rgba(0,255,136,0.12)',
+    borderColor: 'rgba(255,255,255,0.12)',
   },
   counter: {
     fontWeight: '700',
     color: '#ffffff',
   },
   counterAccent: {
-    color: '#00e676',
+    color: '#d0d0d0',
   },
   question: {
     color: 'rgba(255,255,255,0.78)',
@@ -319,17 +319,17 @@ const styles = StyleSheet.create({
   },
   answers: {},
   answerBtn: {
-    backgroundColor: '#00e676',
+    backgroundColor: '#d0d0d0',
     alignItems: 'center',
     justifyContent: 'center',
   },
   answerBtnDim: {
-    backgroundColor: 'rgba(0,230,118,0.35)',
+    backgroundColor: 'rgba(208,208,208,0.35)',
     alignItems: 'center',
     justifyContent: 'center',
   },
   answerCorrect: {
-    backgroundColor: '#00e676',
+    backgroundColor: '#d0d0d0',
     alignItems: 'center',
     justifyContent: 'center',
     borderWidth: 2,
@@ -356,12 +356,12 @@ const styles = StyleSheet.create({
     textDecorationLine: 'underline',
   },
   nextBtn: {
-    backgroundColor: '#00e676',
+    backgroundColor: '#d0d0d0',
     alignItems: 'center',
     justifyContent: 'center',
     ...Platform.select({
       ios: {
-        shadowColor: '#00e676',
+        shadowColor: '#d0d0d0',
         shadowOpacity: 0.18,
         shadowRadius: 10,
         shadowOffset: { width: 0, height: 3 },

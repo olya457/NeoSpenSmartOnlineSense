@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import { View, Image, StyleSheet, Dimensions } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -142,7 +140,7 @@ const styles = StyleSheet.create({
     ...StyleSheet.absoluteFillObject,
     backgroundColor: 'rgba(5, 15, 10, 0.92)',
     borderWidth: 1,
-    borderColor: 'rgba(0,255,136,0.18)',
+    borderColor: 'rgba(208,208,208,0.18)',
   },
 
   iconWrap: {
@@ -151,9 +149,9 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
   },
   iconWrapActive: {
-    backgroundColor: 'rgba(0,255,136,0.12)',
+    backgroundColor: 'rgba(208,208,208,0.12)',
     borderWidth: 1.5,
-    borderColor: '#00ff88',
+    borderColor: '#d0d0d0',
   },
 
   icon: {
@@ -162,6 +160,6 @@ const styles = StyleSheet.create({
   },
   iconActive: {
     opacity: 1,
-    tintColor: '#00ff88',
+    tintColor: '#d0d0d0',
   },
 });
